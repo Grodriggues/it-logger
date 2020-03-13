@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Moment from "react-moment";
 
 function LogItem({ log }) {
   return (
@@ -17,7 +18,8 @@ function LogItem({ log }) {
         <span className="grey-text">
           <span className="black-text">Id:# {log.id} </span>
           Last updated by
-          <span className="black-text"> {log.tech}</span>
+          <span className="black-text"> {log.tech}</span> on
+          <Moment format="MMMM Do YYYY,h:mm:ss a">{log.date}</Moment>
         </span>
       </div>
     </li>
