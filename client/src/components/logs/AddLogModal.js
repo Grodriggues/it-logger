@@ -5,6 +5,8 @@ function AddLogModal() {
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState("");
 
+  const onSubmit = () => {};
+
   return (
     <div id="add-log-modal" className="modal" style={modalStyle}>
       <div className="modal-content">
@@ -15,7 +17,7 @@ function AddLogModal() {
               type="text"
               name="msg"
               value={msg}
-              onChange={e => setMessage(e.target.value)}
+              onChange={e => setMsg(e.target.value)}
             />
             <label htmlFor="msg" className="active">
               Log message
