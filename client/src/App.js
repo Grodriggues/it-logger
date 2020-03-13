@@ -6,6 +6,7 @@ import Logs from "./components/logs/Logs";
 
 //Layout components
 import SearchBar from "./components/layouts/SearchBar";
+import AddBtn from "./components/layouts/AddBtn";
 
 function App() {
   useEffect(() => {
@@ -15,6 +16,7 @@ function App() {
     <Fragment>
       <SearchBar />
       <div className="container">
+        <AddBtn />
         <Logs />
       </div>
     </Fragment>

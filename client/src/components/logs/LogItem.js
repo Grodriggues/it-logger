@@ -21,6 +21,9 @@ function LogItem({ log }) {
           <span className="black-text"> {log.tech}</span> on
           <Moment format="MMMM Do YYYY,h:mm:ss a">{log.date}</Moment>
         </span>
+        <a href="#!" className="secondary-content">
+          <i className="material-icons grey-text">delete</i>
+        </a>
       </div>
     </li>
   );

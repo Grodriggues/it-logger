@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LogItem from "./LogItem";
+import PreLoader from "../layouts/PreLoader";
 
 function Logs() {
   const [logs, setLogs] = useState([]);
@@ -12,7 +13,6 @@ function Logs() {
   const getLogs = async () => {
     setLoading(true);
     const res = await fetch("/logs");
-    console.log("to aqui", res);
     const data = await res.json();
 
     setLogs(data);
@@ -20,7 +20,7 @@ function Logs() {
   };
 
   if (loading) {
-    return <h3>Loading..</h3>;
+    return <PreLoader />;
   }
 
   return (
@@ -31,7 +31,7 @@ function Logs() {
       {!loading && logs.length === 0 ? (
         <p>No logs</p>
       ) : (
-        logs.map(log => <LogItem log={log} key={log.id}/>)
+        logs.map(log => <LogItem log={log} key={log.id} />)
       )}
     </ul>
   );
