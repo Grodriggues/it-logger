@@ -1,37 +1,37 @@
 {
   "logs": [
     {
-      "id":1,
-      "message":"Changed hard drive on workstation 005",
-      "attention":false,
-      "date":"03/01/2019",
-      "tech":"John Doe"
+      "id": 1,
+      "message": "Changed hard drive on workstation 005",
+      "attention": false,
+      "date": "03/01/2019",
+      "tech": "John Doe"
     },
     {
-      "id":2,
-      "message":"Problem with the database 004",
-      "attention":false,
-      "date":"03/01/2019",
-      "tech":"Jane Doe"
+      "id": 2,
+      "message": "Problem with the database 004",
+      "attention": false,
+      "date": "03/01/2019",
+      "tech": "Jane Doe"
     },
     {
-      "id":3,
-      "message":"Changed hard drive on workstation B 005",
-      "attention":false,
-      "date":"03/01/2019",
-      "tech":"John Doe"
+      "id": 3,
+      "message": "Changed hard drive on workstation B 005",
+      "attention": true,
+      "date": "03/01/2019",
+      "tech": "John Doe"
     }
   ],
-  "techs":[
-      {
-        "id":1,
-        "firstname":"John",
-        "lastname":"Doe"
-      },
-      {
-        "id":2,
-        "firstname":"Jane",
-        "lastname":"Doe"
-      }
+  "techs": [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe"
+    },
+    {
+      "id": 2,
+      "firstname": "Jane",
+      "lastname": "Doe"
+    }
   ]
 }

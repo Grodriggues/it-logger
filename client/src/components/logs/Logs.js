@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import LogItem from "./LogItem";
 
 function Logs() {
   const [logs, setLogs] = useState([]);
@@ -30,7 +31,7 @@ function Logs() {
       {!loading && logs.length === 0 ? (
         <p>No logs</p>
       ) : (
-        logs.map(log => <li>{log.message}</li>)
+        logs.map(log => <LogItem log={log} key={log.id}/>)
       )}
     </ul>
   );
