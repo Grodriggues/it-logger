@@ -13,6 +13,12 @@ function LogItem({ log }) {
         >
           {log.message}
         </a>
+        <br />
+        <span className="grey-text">
+          <span className="black-text">Id:# {log.id} </span>
+          Last updated by
+          <span className="black-text"> {log.tech}</span>
+        </span>
       </div>
     </li>
   );
