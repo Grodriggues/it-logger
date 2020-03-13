@@ -4,6 +4,7 @@ import "./App.css";
 //Logs
 import Logs from "./components/logs/Logs";
 import AddLogModal from "./components/logs/AddLogModal";
+import EditLogModal from "./components/logs/EditLogModal";
 
 //Layout components
 import SearchBar from "./components/layouts/SearchBar";
@@ -19,6 +20,7 @@ function App() {
       <div className="container">
         <AddBtn />
         <AddLogModal />
+        <EditLogModal />
         <Logs />
       </div>
     </Fragment>
