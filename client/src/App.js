@@ -3,6 +3,7 @@ import M from "materialize-css/dist/js/materialize.min.js";
 import "./App.css";
 //Logs
 import Logs from "./components/logs/Logs";
+import AddLogModal from "./components/logs/AddLogModal";
 
 //Layout components
 import SearchBar from "./components/layouts/SearchBar";
@@ -17,6 +18,7 @@ function App() {
       <SearchBar />
       <div className="container">
         <AddBtn />
+        <AddLogModal />
         <Logs />
       </div>
     </Fragment>
