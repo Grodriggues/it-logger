@@ -5,7 +5,9 @@ function AddLogModal() {
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState("");
 
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    console.log({ msg, tech, attention });
+  };
 
   return (
     <div id="add-log-modal" className="modal" style={modalStyle}>
@@ -58,11 +60,11 @@ function AddLogModal() {
           </div>
         </div>
       </div>
-      <div className="modal-foote">
+      <div className="modal-footer">
         <a
           href="#!"
           onClick={onSubmit}
-          className="modal-close waves-effect waves-green btn-flat"
+          className="waves-effect waves-light btn-small"
         >
           Enter
         </a>
