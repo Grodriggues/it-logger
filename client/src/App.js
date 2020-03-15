@@ -7,6 +7,7 @@ import AddLogModal from "./components/logs/AddLogModal";
 import EditLogModal from "./components/logs/EditLogModal";
 //Techs
 import AddTechModal from "./components/techs/AddTechModal";
+import TechListModal from "./components/techs/TechListModal";
 
 //Layout components
 import SearchBar from "./components/layouts/SearchBar";
@@ -21,9 +22,10 @@ function App() {
       <SearchBar />
       <div className="container">
         <AddBtn />
-        <AddLogModal />
-        <EditLogModal />
-        <AddTechModal />
+          <AddLogModal />
+          <EditLogModal />
+          <AddTechModal />
+          <TechListModal />
         <Logs />
       </div>
     </Fragment>

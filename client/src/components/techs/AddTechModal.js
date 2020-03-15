@@ -1,60 +1,73 @@
-import React, { useState } from "react";
+import React, { useState,PropTypes } from "react";
 import M from "materialize-css/dist/js/materialize.js";
 
 function AddTechModal() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [tech, setTech] = useState("");
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+ 
 
   const onSubmit = () => {
-    if (firstName === "" || lastName === "") {
-      M.toast({ html: "Please enter the first and last name" });
+    if (firstname === '' || lastname === '') {
+      M.toast({ html: 'Please enter the first and last name' });
+    } else {
+      
+
+      M.toast({ html: `${firstname} ${lastname} was added as a tech` });
+
+      // Clear Fields
+      setFirstName('');
+      setLastName('');
     }
   };
 
   return (
-    <div id="add-tech-modal" className="modal" style={modalStyle}>
-      <div className="modal-content">
-        <h4>New Technichian</h4>
-        <div className="row">
-          <div className="input-field">
+    <div id='add-tech-modal' className='modal'>
+      <div className='modal-content'>
+        <h4>New Technician</h4>
+        <div className='row'>
+          <div className='input-field'>
             <input
-              type="text"
-              name="firstName"
-              value={firstName}
+              type='text'
+              name='firstName'
+              value={firstname}
               onChange={e => setFirstName(e.target.value)}
             />
-            <label htmlFor="firstName" className="active">
-              Fistname
+            <label htmlFor='firstName' className='active'>
+              First Name
             </label>
           </div>
         </div>
-        <div className="row">
-          <div className="input-field">
+
+        <div className='row'>
+          <div className='input-field'>
             <input
-              type="text"
-              name="lastName"
-              value={lastName}
+              type='text'
+              name='lastName'
+              value={lastname}
               onChange={e => setLastName(e.target.value)}
             />
-            <label htmlFor="lastName" className="active">
-              lastname
+            <label htmlFor='lastName' className='active'>
+              Last Name
             </label>
           </div>
         </div>
       </div>
-      <div className="modal-footer">
+      <div className='modal-footer'>
         <a
-          href="#!"
+          href='#!'
           onClick={onSubmit}
-          className="waves-effect waves-blue btn-small"
+          className='modal-close waves-effect blue waves-light btn'
         >
           Enter
         </a>
       </div>
     </div>
   );
-}
+};
+
+AddTechModal.propTypes = {
+  //addTech: PropTypes.func.isRequired
+};
 
 const modalStyle = {
   width: "75%",
