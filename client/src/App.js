@@ -12,23 +12,28 @@ import TechListModal from "./components/techs/TechListModal";
 //Layout components
 import SearchBar from "./components/layouts/SearchBar";
 import AddBtn from "./components/layouts/AddBtn";
+//Redux
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   useEffect(() => {
     M.AutoInit();
   });
   return (
-    <Fragment>
-      <SearchBar />
-      <div className="container">
-        <AddBtn />
+    <Provider store={store}>
+      <Fragment>
+        <SearchBar />
+        <div className="container">
+          <AddBtn />
           <AddLogModal />
           <EditLogModal />
           <AddTechModal />
           <TechListModal />
-        <Logs />
-      </div>
-    </Fragment>
+          <Logs />
+        </div>
+      </Fragment>
+    </Provider>
   );
 }
 
