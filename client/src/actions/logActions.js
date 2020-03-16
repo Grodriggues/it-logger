@@ -1,6 +1,11 @@
 import { GET_LOGS, SET_LOADING, LOGS_ERROR } from "./types";
 
-export const getLogs = () => {};
+export const getLogs = () => {
+  return async(dispatch) =>{
+    setLoading();
+
+  }
+};
 
 export const setLoading = () => {
   return {
